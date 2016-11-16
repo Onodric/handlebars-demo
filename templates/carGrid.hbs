@@ -1,0 +1,12 @@
+{{! Templates only take objects as input}}
+{{#each cars}}
+  <section id="card--{{@index}}" class="card-wrapper" style="border: 2px solid {{color}}">
+    <h3>Car #{{@index}} {{year}} {{make}} {{model}}</h3>
+    <div class="car-price">$ {{price}}</div>
+    <div class="card-img" style="background-image: url('images/{{image}}')"></div>
+    {{#if purchased}}
+      <span class="card-sold">SOLD!</span>
+    {{/if}}
+    <p class="card-copy">{{description}}</p>
+  </section>
+{{/each}}
